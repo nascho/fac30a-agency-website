@@ -1,0 +1,416 @@
+/*------------------------
+Settings 
+------------------------*/
+
+:root {
+   --black: #000; 
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    line-height: 1.2;
+    font-family:'Courier New', Courier, monospace;
+    scroll-behavior: smooth;
+    scroll-padding-top: 11rem;
+}
+
+body {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--black);
+}
+
+.width-95 {
+    width: 95%;
+}
+
+.centred {
+    text-align: center;
+}
+
+.hr-centred {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: 2px solid #000;
+}
+
+.hr-thick {
+    border: 2px solid #000;
+}
+
+.hr-small-centred {
+    width: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #000;
+}
+
+.section-spacing {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.margin-centred {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.clear-both {
+    clear: both;
+}
+
+p {
+    line-height: 1.5;
+}
+
+button[type="button"], button[type="submit"] {
+    width: 50%;
+    padding: 0.75rem 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: orange;
+    color: #000;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+/*------------------------
+Header 
+------------------------*/
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 4px solid #000 ;
+    position: fixed;
+    width: 85%;
+    top: 0px;
+    z-index: 10;
+    padding: 0px;
+    background-color: #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.header-spacing {
+    height: 8.5rem;
+    border: none;
+}
+
+/*------------------------
+Navigation 
+------------------------*/
+
+.navbar-links ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar-links > ul > li {
+    margin-right: 0.75rem;
+    margin-left: 0.75rem;
+}
+
+.navbar-links ul > li > a {
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.navbar-links ul > li > a:link, a:visited, a:active {
+    color: var(--black);
+}
+
+.navbar-links ul > li > a:hover {
+    color: gray;
+    text-decoration: underline;
+}
+
+/*------------------------
+About
+------------------------*/
+
+.about-text {
+    
+    padding: 0.5rem; 
+    text-align: justify;
+}
+
+/*------------------------
+Team Members
+------------------------*/
+
+.team-members figure {
+    text-align: justify;
+    margin-right: 0.75rem;
+    margin-left: 0.75rem;
+    margin-bottom: 1rem;    
+}
+
+.team-members figure img {
+    width: 20%;
+    border-radius: 10px;
+    margin-bottom: 0.25rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+/*------------------------
+Cats
+------------------------*/
+.cats-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, auto);
+}
+
+.hide-cat-image {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+}
+
+.grid-item {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.grid-item img {
+    width: 90%;
+    border-radius: 10px;
+}
+
+.grid-item figcaption {
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*------------------------
+Contact Form
+------------------------*/
+
+#form {
+    border: 1px solid #000;
+    border-radius: 5px;
+    width: 75%;
+    padding: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+label, input, textarea, button {
+  display: block;
+  margin-top: 1rem;
+}
+
+input, textarea {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0.5rem;
+  border: 1px solid hsl(220, 10%, 75%);
+}
+
+textarea {
+    height: 100px;
+}
+
+/*------------------------
+Footer
+------------------------*/ 
+
+footer {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    height: 2rem;
+}
+
+footer #left {
+    margin-left: 1rem;
+}
+
+footer #right {
+    margin-right: 1rem;
+}
+
+/*------------------------
+Media Queries
+------------------------*/
+
+.toggle-button {
+    position: absolute;
+    top: 4rem;
+    right: 1.5rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 0.3rem;
+    width: 150%;
+    background-color: #000;
+    border-radius: 10px;
+    
+}
+
+.display-content {
+    display: block!important;
+}
+
+.read-more-btn {
+    display: none;
+}
+
+/* header, about and team members */
+
+@media only screen and (max-width: 425px) {
+
+    header img {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    
+    .toggle-button {
+        display: flex;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 15rem;
+    }
+
+    .extra-content {
+        display: none;
+    }
+
+    button.read-more-btn {
+        display: block;
+    }
+}
+
+/* cats images related */
+
+@media only screen and (max-width: 650px) {
+
+    .hide-cat-image {
+        display: none;
+    }
+    
+    button.display-image-btn {
+        display: block;
+    }
+
+    .cats-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: 650px) {
+
+    button.display-image-btn {
+        display: none;
+    }
+}
+
+/* form */
+
+@media only screen and (max-width: 925px) {
+
+    #form {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+
+    #form {
+        width: 87%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+    #form {
+        width: 95%;
+    }
+}
+
+/* footer */
+
+@media only screen and (max-width: 1300px) {
+    
+    footer #left {
+        font-size: small;
+        text-align: center;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    footer #right {
+        font-size: small;
+        text-align: center;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
